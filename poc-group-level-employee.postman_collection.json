@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "5689c983-a510-4c47-9a74-9cf4d34fcb9c",
+		"name": "poc-group-level-employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20290085"
+	},
+	"item": [
+		{
+			"name": "List Group Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080/employee/grp_01J69M448QE8YW3MA1XWPEXE88",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"grp_01J69M448QE8YW3MA1XWPEXE88"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Group Employees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8080/employee/grp_01J69M448QE8YW3MA1XWPEXE88",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"grp_01J69M448QE8YW3MA1XWPEXE88"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Dec 2024 05:56:57 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "305"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"grp_01J69M448QE8YW3MA1XWPEXE88/emp_01JFVR48AXHSYR72DT2DAWQ44H\",\n        \"first_name\": \"Jatin\",\n        \"last_name\": \"Gupta\",\n        \"email\": \"jatin.appointy@gmail.com\",\n        \"profileImage\": {},\n        \"phone_verified_on\": {\n            \"seconds\": -62135596800\n        },\n        \"hireDate\": {\n            \"seconds\": -62135596800\n        },\n        \"user_id\": \"usr_01J2B00PF4B0NT8Y1JKVHBYBR1\",\n        \"active\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create Group Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"active\": true,\n    \"email\": \"jatin.appointy@gmail.com\",\n    \"enable_login\": true,\n    \"first_name\": \"Jatin\",\n    \"last_name\": \"Gupta\",\n    \"id\": \"grp_01J69M448QE8YW3MA1XWPEXE88\",\n    \"user_id\": \"usr_01J2B00PF4B0NT8Y1JKVHBYBR1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/employee",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Group Employee",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"active\": true,\n    \"email\": \"jatin.appointy@gmail.com\",\n    \"enable_login\": true,\n    \"first_name\": \"Jatin\",\n    \"last_name\": \"Gupta\",\n    \"id\": \"grp_01J69M448QE8YW3MA1XWPEXE88\",\n    \"user_id\": \"usr_01J2B00PF4B0NT8Y1JKVHBYBR1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/employee",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 24 Dec 2024 07:12:02 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "204"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"id\":\"grp_01J69M448QE8YW3MA1XWPEXE88/emp_01JFVR48AXHSYR72DT2DAWQ44H\",\"first_name\":\"Jatin\",\"last_name\":\"Gupta\",\"email\":\"jatin.appointy@gmail.com\",\"user_id\":\"usr_01J2B00PF4B0NT8Y1JKVHBYBR1\",\"active\":true}\n"
+				}
+			]
+		},
+		{
+			"name": "List Group Employee Linked to Company",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080/employee/company/Z3JwXzAxSjY5TTQ0OFFFOFlXM01BMVhXUEVYRTg4JTJGY29tXzAxSjY5TTQ0REJSTjdOWEpSN1o4RTZDTUdO",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"company",
+						"Z3JwXzAxSjY5TTQ0OFFFOFlXM01BMVhXUEVYRTg4JTJGY29tXzAxSjY5TTQ0REJSTjdOWEpSN1o4RTZDTUdO"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Group Employee Linked to Company",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8080/employee/company/Z3JwXzAxSjY5TTQ0OFFFOFlXM01BMVhXUEVYRTg4JTJGY29tXzAxSjY5TTQ0REJSTjdOWEpSN1o4RTZDTUdO",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"company",
+								"Z3JwXzAxSjY5TTQ0OFFFOFlXM01BMVhXUEVYRTg4JTJGY29tXzAxSjY5TTQ0REJSTjdOWEpSN1o4RTZDTUdO"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Dec 2024 07:47:58 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "305"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"grp_01J69M448QE8YW3MA1XWPEXE88/emp_01JFVR48AXHSYR72DT2DAWQ44H\",\n        \"first_name\": \"Jatin\",\n        \"last_name\": \"Gupta\",\n        \"email\": \"jatin.appointy@gmail.com\",\n        \"profileImage\": {},\n        \"phone_verified_on\": {\n            \"seconds\": -62135596800\n        },\n        \"hireDate\": {\n            \"seconds\": -62135596800\n        },\n        \"user_id\": \"usr_01J2B00PF4B0NT8Y1JKVHBYBR1\",\n        \"active\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Link Group Employee to Company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employee_id\": \"grp_01J69M448QE8YW3MA1XWPEXE88/emp_01JFVR48AXHSYR72DT2DAWQ44H\",\n    \"company_id\": \"grp_01J69M448QE8YW3MA1XWPEXE88/com_01J69M44DBRN7NXJR7Z8E6CMGN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/employee/company",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"company"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Link Group Employee to Company",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employee_id\": \"grp_01J69M448QE8YW3MA1XWPEXE88/emp_01JFVR48AXHSYR72DT2DAWQ44H\",\n    \"company_id\": \"grp_01J69M448QE8YW3MA1XWPEXE88/com_01J69M44DBRN7NXJR7Z8E6CMGN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/employee/company",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"company"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 24 Dec 2024 07:46:58 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
